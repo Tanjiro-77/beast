@@ -311,16 +311,15 @@ function DashboardPreview() {
                   <motion.div
                     key={i}
                     className="flex-1 rounded-sm"
-                    style={{ background: i === 13 ? "var(--neon-cyan)" : `color-mix(in oklab, var(--neon-cyan) ${30 + i * 5}%, var(--neon-violet))` }}
-                    initial={{ scaleY: 0 }}
-                    whileInView={{ scaleY: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 + i * 0.03, duration: 0.4 }}
                     style={{
                       height: `${(h / 142) * 100}%`,
                       background: i === 13 ? "var(--neon-cyan)" : `rgba(0,255,200,${0.2 + i * 0.05})`,
                       transformOrigin: "bottom",
                     }}
+                    initial={{ scaleY: 0 }}
+                    whileInView={{ scaleY: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + i * 0.03, duration: 0.4 }}
                   />
                 ))}
               </div>
